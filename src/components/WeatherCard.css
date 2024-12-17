@@ -1,0 +1,71 @@
+/* Container styling */
+.weather-container {
+  padding: 20px;
+  /* background-color: #f7f9fc; Light background for the container */
+  border-radius: 10px;
+}
+
+/* Row styling */
+.weather-row {
+  display: flex; /* Flexbox layout for horizontal alignment */
+  justify-content: space-between; /* Evenly space out items */
+  align-items: stretch; /* Ensure equal height */
+  list-style: none; /* Remove bullets from list */
+  margin: 0;
+  padding: 0;
+  gap: 15px; /* Add spacing between cards */
+}
+
+/* Common card styles for all list items */
+.weather-row li {
+  flex: 1; /* Ensure equal width for all cards */
+  padding: 20px;
+  background-color: #ffffff; /* White background for cards */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center-align text */
+  font-family: Arial, sans-serif;
+  color: #333; /* Dark text color */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Hover effects */
+}
+
+/* Add a hover effect to the cards */
+.weather-row li:hover {
+  transform: translateY(-5px); /* Lift the card on hover */
+  background-color: #f0f4ff; /* Light blue background on hover */
+}
+
+/* Styling for specific cards */
+.current-card {
+  border-left: 4px solid #6c63ff; /* Accent border for differentiation */
+}
+
+.weather-card {
+  border-left: 4px solid #34a4eb; /* Accent border for differentiation */
+}
+
+.astro-card {
+  border-left: 4px solid #ffa500; /* Accent border for differentiation */
+}
+/* Animation for city name */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.city-name {
+  animation: fadeIn 1s ease-in-out; 
+  font-family: "Audiowide", sans-serif;
+  display: flex;
+  justify-content: center; 
+  height: 10vh;           
+  text-align: center;      /* Ensure text is centered */
+}
+
