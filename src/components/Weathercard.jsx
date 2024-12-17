@@ -58,8 +58,8 @@ const WeatherCard = ({ cityKey }) => {
       <h1 className="city-name">{location.name} , {location.country}</h1>
   <ul className="weather-row">
  
-    <li className="current-card">
-      <p>Current Weather</p>
+    <li className="current-card card">
+      <h2>Current Weather</h2>
       <p>Local Time: {location.localtime}</p>
         <p>Temperature: {current.temp_c}°C</p>
         <p>Condition: {current.condition.text}</p>
@@ -67,17 +67,19 @@ const WeatherCard = ({ cityKey }) => {
         <p>UV Index: {current.uv}</p>
     </li>
 
-    <li className="weather-card">
+    <li className="weather-card card">
       <h2>Today report {forecast.forecastday[0].date}</h2>
-      <p>Max Temp: {forecast.forecastday[0].day.maxtemp_c}°C</p>
-      <p>Min Temp: {forecast.forecastday[0].day.mintemp_c}°C</p>
+      
+      <p>Maximium Temperature: {forecast.forecastday[0].day.maxtemp_c}°C</p>
+      <p>Minimum Temperature: {forecast.forecastday[0].day.mintemp_c}°C</p>
       <p>Condition: {forecast.forecastday[0].day.condition.text}</p>
       <p>Precipitation Chance: {forecast.forecastday[0].day.daily_chance_of_rain}%</p>
     </li>
 
-    <li className="astro-card">
+    <li className="astro-card card">
       <p>Sunrise: {forecast.forecastday[0].astro.sunrise}</p>
-      <p>Sunset: {forecast.forecastday[0].astro.sunset}</p>
+      <p>Sunset : {forecast.forecastday[0].astro.sunset}</p>
+     
     </li>
   </ul>
 </div>
