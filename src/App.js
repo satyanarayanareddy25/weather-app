@@ -4,7 +4,7 @@ import WeatherCard from "./components/Weathercard";
 import "./App.css";
 
 const App = () => {
-  const [cityKey, setCityKey] = useState(""); // To store the selected city
+  const [cityKey, setCityKey] = useState("Razam"); // To store the selected city
 
   // This function will update the cityKey when a city is selected from the Search component
   const handleCitySelect = (city) => {

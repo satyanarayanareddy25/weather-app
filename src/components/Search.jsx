@@ -43,7 +43,9 @@ const Search = ({ onCitySelect }) => {
         type="text" 
         value={query} 
         onChange={(e) => setQuery(e.target.value)} 
-        placeholder="Enter city name" 
+        placeholder="Enter city name"
+        // defaultValue="Razam"
+
       />
 
       {cities.length > 0 && (
