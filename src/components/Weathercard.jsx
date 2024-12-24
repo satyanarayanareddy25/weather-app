@@ -4,11 +4,9 @@ import './WeatherCard.css';
 const WeatherCard = ({ cityKey }) => {
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
-  const apiKey = process.env.REACT_APP_API_KEY;
-
+  const apiKey = `${process.env.REACT_APP_API_KEY}`;
 
   useEffect(() => {
-    // Clear old data from localStorage whenever cityKey changes
     localStorage.removeItem("weatherData");
 
     const fetchWeather = async () => {
@@ -18,8 +16,6 @@ const WeatherCard = ({ cityKey }) => {
         );
         const data = await response.json();
         console.log("Fetched Data:", data);
-
-        // Store the fetched data in localStorage
         localStorage.setItem("weatherData", JSON.stringify(data));
 
         // Set weather data in state

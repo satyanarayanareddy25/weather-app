@@ -5,7 +5,8 @@ import './Search.css';
 const Search = ({ onCitySelect }) => {
   const [query, setQuery] = useState('');  // Input value for city search
   const [cities, setCities] = useState([]);  // To store search results
-  const apiKey = process.env.REACT_APP_API_KEY;
+  const apiKey = `${process.env.REACT_APP_API_KEY}`;
+  // console.log(process.env.REACT_APP_API_KEY);
 
   
   useEffect(() => {
