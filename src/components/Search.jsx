@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Search.css';
 import DigitalClock from './DigitalClock';
+import apiKey1 from '../api/weatherApi';
 
 const Search = ({ onCitySelect }) => {
   const [query, setQuery] = useState('');  // Input value for city search
   const [cities, setCities] = useState([]);  // To store search results
 
-  const apiKey = '28af5ec20b63410ca4261836241712';  // WeatherAPI key
+  const apiKey = apiKey1;  // WeatherAPI key
   
   useEffect(() => {
     if (query) {
@@ -62,7 +63,6 @@ const Search = ({ onCitySelect }) => {
           ))}
         </div>
       )}
-      {/* <DigitalClock/> */}
     </div>
   );
 };

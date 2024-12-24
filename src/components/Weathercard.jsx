@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 
 import './WeatherCard.css';
+import apiKey1 from "../api/weatherApi";
 const WeatherCard = ({ cityKey }) => {
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
-  const apiKey = "28af5ec20b63410ca4261836241712";
+  const apiKey=apiKey1;
 
   useEffect(() => {
     // Clear old data from localStorage whenever cityKey changes

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Search from "./components/Search";
 import WeatherCard from "./components/Weathercard";
 import "./App.css";
+import DigitalClock from "./components/DigitalClock";
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <div className="searchbar-container">
           <Search onCitySelect={handleCitySelect} />
         </div>
+        {/* <DigitalClock/> */}
         <div className="weather-container">
           {cityKey && <WeatherCard cityKey={cityKey} />}
         </div>
