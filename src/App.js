@@ -3,6 +3,7 @@ import Search from "./components/Search";
 import WeatherCard from "./components/Weathercard";
 import "./App.css";
 
+
 const App = () => {
   const [cityKey, setCityKey] = useState("Razam"); // To store the selected city
 

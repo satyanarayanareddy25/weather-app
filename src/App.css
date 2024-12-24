@@ -2,9 +2,28 @@ body{
   background-image: url('C:/Users/hp/weather-app/client/src/assets/images/background.webp'); 
   background-position:center;
   background-repeat: no-repeat;
-  min-height: 1000px;
+  /* min-height: 1000px; */
   background-size: cover;
 }
 body::-webkit-scrollbar{
   display:none;
+}
+.digital-clock{
+  padding-left: 3vh;
+}
+
+.time{
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+}
+.date{
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-style: italic;
+}
+
+@media screen and (max-width:768px) {
+  .digital{
+    display: none;
+  }
 }

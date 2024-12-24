@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Search.css';
+import DigitalClock from './DigitalClock';
 
 const Search = ({ onCitySelect }) => {
   const [query, setQuery] = useState('');  // Input value for city search
@@ -61,6 +62,7 @@ const Search = ({ onCitySelect }) => {
           ))}
         </div>
       )}
+      {/* <DigitalClock/> */}
     </div>
   );
 };

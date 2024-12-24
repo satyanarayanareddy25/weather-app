@@ -39,18 +39,18 @@ const WeatherCard = ({ cityKey }) => {
   }, [cityKey]); // Re-fetch when cityKey changes
 
   if (error) {
-    return <div>{error}</div>;
+    return <div className="class1">{error}</div>;
   }
 
   if (!weatherData) {
-    return <div>Loading...</div>;
+    return <div className="class1">Loading...</div>;
   }
 
   const { location, current, forecast } = weatherData;
   const forecastDay = forecast?.forecastday?.[0];
 
   if (!forecastDay) {
-    return <div>No forecast data available.</div>;
+    return <div className="class1">No forecast data available.</div>;
   }
 
   return (
