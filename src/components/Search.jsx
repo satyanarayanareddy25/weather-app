@@ -13,7 +13,7 @@ const Search = ({ onCitySelect }) => {
     if (query) {
       const fetchCities = async () => {
         try {
-          const response = await axios.get(`http://api.weatherapi.com/v1/search.json`, {
+          const response = await axios.get(`https://api.weatherapi.com/v1/search.json`, {
             params: {
               key: apiKey,
               q: query,  // City search query
